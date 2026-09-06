@@ -1,0 +1,15 @@
+{
+  "campaign_id": "ssrf_vampi_custom",
+  "app": "vampi",
+  "label": "attack",
+  "attack_family": "ssrf",
+  "attack_tool": "custom",
+  "src_ip": "172.30.0.24",
+  "start_ts": "2026-08-02T18:21:49.710Z",
+  "end_ts": "2026-08-02T18:21:55.022Z",
+  "extra": {
+    "seed": 42,
+    "rows_sent": 500,
+    "min_rows": 500
+  }
+}

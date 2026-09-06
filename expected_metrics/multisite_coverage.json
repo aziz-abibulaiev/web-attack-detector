@@ -1,0 +1,163 @@
+{
+  "config": {
+    "seed": 42,
+    "min_site_n": 50
+  },
+  "A_attribution": {
+    "split_method": "temporal@2025-04-20 07:50:59+00:00",
+    "threshold_1pct": 0.01961889230014877,
+    "overall_alert_rate": 0.20024,
+    "n_sites_in_test": 126,
+    "n_sites_covered_by_train_slice": 102,
+    "covered_sites": {
+      "n_test": 97559,
+      "alert_rate": 0.19818776330220686
+    },
+    "uncovered_sites": {
+      "n_test": 2441,
+      "alert_rate": 0.28226136829168375,
+      "n_sites": 24
+    },
+    "share_of_all_fp_from_uncovered_sites": 0.03440870954854175,
+    "top15_sites_by_fp": [
+      {
+        "site": "1.php",
+        "n_test": 36050,
+        "alerts": 3888,
+        "alert_rate": 0.1078502080443828,
+        "in_train_slice": true,
+        "appeared_after_split": false
+      },
+      {
+        "site": "(small)",
+        "n_test": 4631,
+        "alerts": 3026,
+        "alert_rate": 0.6534225869142734,
+        "in_train_slice": true,
+        "appeared_after_split": false
+      },
+      {
+        "site": "docs",
+        "n_test": 9526,
+        "alerts": 1754,
+        "alert_rate": 0.18412765064035272,
+        "in_train_slice": true,
+        "appeared_after_split": false
+      },
+      {
+        "site": "wp-content",
+        "n_test": 3165,
+        "alerts": 1490,
+        "alert_rate": 0.4707740916271722,
+        "in_train_slice": true,
+        "appeared_after_split": false
+      },
+      {
+        "site": "(root)",
+        "n_test": 15581,
+        "alerts": 1265,
+        "alert_rate": 0.08118862717412233,
+        "in_train_slice": true,
+        "appeared_after_split": false
+      },
+      {
+        "site": "wp-admin",
+        "n_test": 1380,
+        "alerts": 1056,
+        "alert_rate": 0.7652173913043478,
+        "in_train_slice": true,
+        "appeared_after_split": false
+      },
+      {
+        "site": "wfvjf",
+        "n_test": 2963,
+        "alerts": 989,
+        "alert_rate": 0.33378332770840363,
+        "in_train_slice": true,
+        "appeared_after_split": false
+      },
+      {
+        "site": "wxt7s",
+        "n_test": 2392,
+        "alerts": 528,
+        "alert_rate": 0.22073578595317725,
+        "in_train_slice": true,
+        "appeared_after_split": false
+      },
+      {
+        "site": "nhib",
+        "n_test": 2483,
+        "alerts": 468,
+        "alert_rate": 0.18848167539267016,
+        "in_train_slice": true,
+        "appeared_after_split": false
+      },
+      {
+        "site": "eze",
+        "n_test": 2353,
+        "alerts": 384,
+        "alert_rate": 0.16319592010199746,
+        "in_train_slice": true,
+        "appeared_after_split": false
+      },
+      {
+        "site": "whdmh",
+        "n_test": 1803,
+        "alerts": 360,
+        "alert_rate": 0.19966722129783693,
+        "in_train_slice": true,
+        "appeared_after_split": false
+      },
+      {
+        "site": "wp-includes",
+        "n_test": 762,
+        "alerts": 349,
+        "alert_rate": 0.458005249343832,
+        "in_train_slice": true,
+        "appeared_after_split": false
+      },
+      {
+        "site": "2018",
+        "n_test": 1036,
+        "alerts": 329,
+        "alert_rate": 0.31756756756756754,
+        "in_train_slice": true,
+        "appeared_after_split": false
+      },
+      {
+        "site": "1vzczpi4",
+        "n_test": 1799,
+        "alerts": 299,
+        "alert_rate": 0.16620344635908837,
+        "in_train_slice": true,
+        "appeared_after_split": false
+      },
+      {
+        "site": "2017",
+        "n_test": 715,
+        "alerts": 259,
+        "alert_rate": 0.3622377622377622,
+        "in_train_slice": true,
+        "appeared_after_split": false
+      }
+    ]
+  },
+  "B_stratified_temporal": {
+    "benign_train": 120000,
+    "benign_calib": 25000,
+    "benign_test": 100000,
+    "test_rows_from_trained_sites": 1.0,
+    "fpr_0.01": {
+      "late_benign_alert": 0.01415,
+      "srbh_recall": 1.0,
+      "testbed_custom_cross_tool_recall": 0.995475113122172,
+      "modsec_recall": 0.778469401126982
+    },
+    "fpr_0.05": {
+      "late_benign_alert": 0.0846,
+      "srbh_recall": 1.0,
+      "testbed_custom_cross_tool_recall": 1.0,
+      "modsec_recall": 0.9711702267068536
+    }
+  }
+}

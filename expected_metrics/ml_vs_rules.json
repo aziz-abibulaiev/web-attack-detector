@@ -1,0 +1,178 @@
+{
+  "partB": {
+    "operating_point": {
+      "budget": 0.01,
+      "threshold": 0.011839838946693586,
+      "reference": "1% FPR on zanbil benign"
+    },
+    "false_positive_late_zanbil": {
+      "ml_alert_rate": 0.0042,
+      "regex_alert_rate": 0.0009066666666666666
+    },
+    "srbh_in_distribution_recall": {
+      "overall": {
+        "ml": 1.0,
+        "regex": 0.4577
+      },
+      "marked": {
+        "ml": 1.0,
+        "regex": 1.0,
+        "n": 18308
+      },
+      "marker_free": {
+        "ml": 1.0,
+        "regex": 0.0,
+        "n": 21692
+      }
+    },
+    "testbed_custom_cross_tool_recall": {
+      "overall": {
+        "ml": 0.9990303813833226,
+        "regex": 0.27828054298642535
+      },
+      "marked": {
+        "ml": 1.0,
+        "regex": 1.0,
+        "n": 861
+      },
+      "marker_free": {
+        "ml": 0.9986565158978952,
+        "regex": 0.0,
+        "n": 2233
+      }
+    }
+  },
+  "partC": {
+    "operating_point": "1% FPR on zanbil benign",
+    "in_domain_fp": 0.0042,
+    "sqli": {
+      "ffuf_to_custom": {
+        "recall": 1.0,
+        "n_test": 150,
+        "zanbil_fp": 0.01
+      },
+      "custom_to_ffuf": {
+        "recall": 1.0,
+        "n_test": 570,
+        "zanbil_fp": 0.01
+      }
+    },
+    "xss": {
+      "ffuf_to_custom": {
+        "recall": 0.9933333333333333,
+        "n_test": 150,
+        "zanbil_fp": 0.01
+      },
+      "custom_to_ffuf": {
+        "recall": 1.0,
+        "n_test": 565,
+        "zanbil_fp": 0.01
+      }
+    },
+    "cmd_injection": {
+      "ffuf_to_custom": {
+        "recall": 0.98,
+        "n_test": 150,
+        "zanbil_fp": 0.01
+      },
+      "custom_to_ffuf": {
+        "recall": 1.0,
+        "n_test": 600,
+        "zanbil_fp": 0.01
+      }
+    },
+    "ssti": {
+      "ffuf_to_custom": {
+        "recall": 1.0,
+        "n_test": 500,
+        "zanbil_fp": 0.01
+      },
+      "custom_to_ffuf": {
+        "recall": 1.0,
+        "n_test": 176,
+        "zanbil_fp": 0.01
+      }
+    },
+    "path_traversal": {
+      "ffuf_to_custom": {
+        "recall": 1.0,
+        "n_test": 136,
+        "zanbil_fp": 0.01
+      },
+      "custom_to_ffuf": {
+        "recall": 1.0,
+        "n_test": 594,
+        "zanbil_fp": 0.01
+      }
+    },
+    "scan": {
+      "ffuf_to_custom": {
+        "recall": 0.35046728971962615,
+        "n_test": 428,
+        "zanbil_fp": 0.01
+      },
+      "custom_to_ffuf": {
+        "recall": 1.0,
+        "n_test": 591,
+        "zanbil_fp": 0.01
+      }
+    },
+    "_note": "nosql_injection/ssrf excluded (ffuf slice off-family content); recall is CROSS-TOOL generalization"
+  },
+  "partD": {
+    "text_vs_fused_indomain": {
+      "text_only": {
+        "zanbil_fp": 0.0042,
+        "srbh_recall": 1.0,
+        "custom_recall": 0.9990303813833226
+      },
+      "fused": {
+        "zanbil_fp": 0.00646,
+        "srbh_recall": 1.0,
+        "custom_recall": 1.0
+      }
+    },
+    "text_only_marked_vs_markerfree": {
+      "srbh": {
+        "overall": {
+          "ml": 1.0,
+          "regex": 0.4577
+        },
+        "marked": {
+          "ml": 1.0,
+          "regex": 1.0,
+          "n": 18308
+        },
+        "marker_free": {
+          "ml": 1.0,
+          "regex": 0.0,
+          "n": 21692
+        }
+      },
+      "custom_cross_tool": {
+        "overall": {
+          "ml": 0.9990303813833226,
+          "regex": 0.27828054298642535
+        },
+        "marked": {
+          "ml": 1.0,
+          "regex": 1.0,
+          "n": 861
+        },
+        "marker_free": {
+          "ml": 0.9986565158978952,
+          "regex": 0.0,
+          "n": 2233
+        }
+      }
+    }
+  },
+  "config": {
+    "seed": 42,
+    "deployed": "text-only in-domain",
+    "budgets": [
+      0.01,
+      0.05
+    ]
+  }
+}

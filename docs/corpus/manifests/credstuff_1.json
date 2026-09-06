@@ -1,0 +1,16 @@
+{
+  "campaign_id": "credstuff_1",
+  "app": "vampi",
+  "label": "attack",
+  "attack_family": "cred_stuffing",
+  "attack_tool": "custom",
+  "src_ip": "172.30.0.51",
+  "start_ts": "2026-08-02T18:22:04.521Z",
+  "end_ts": "2026-08-02T18:22:59.657Z",
+  "extra": {
+    "seed": 42,
+    "rows_sent": 103,
+    "duration": 55.0,
+    "rate": 2.0
+  }
+}

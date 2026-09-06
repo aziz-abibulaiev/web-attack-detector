@@ -1,0 +1,358 @@
+{
+  "registry": {
+    "zanbil": {
+      "nature": "real",
+      "has_body": false,
+      "benign": 893936,
+      "attack": 0
+    },
+    "srbh": {
+      "nature": "real",
+      "has_body": true,
+      "benign": 90917,
+      "attack": 287710
+    },
+    "testbed": {
+      "nature": "testbed",
+      "has_body": true,
+      "benign": 7460,
+      "attack": 5948
+    },
+    "csic": {
+      "nature": "semi-synthetic",
+      "has_body": true,
+      "benign": 9644,
+      "attack": 15954
+    },
+    "nasa": {
+      "nature": "real",
+      "has_body": false,
+      "benign": 8436,
+      "attack": 0
+    },
+    "clarknet": {
+      "nature": "real",
+      "has_body": false,
+      "benign": 18411,
+      "attack": 0
+    },
+    "calgary": {
+      "nature": "real",
+      "has_body": false,
+      "benign": 8152,
+      "attack": 0
+    }
+  },
+  "folds": [
+    {
+      "Bstar": "zanbil",
+      "Astar": "srbh",
+      "meta": {
+        "fit_benign": 46853,
+        "fit_attack": 18617,
+        "calib_benign": 5250,
+        "calib_attack": 3285,
+        "train_benign_sources": [
+          "calgary",
+          "clarknet",
+          "csic",
+          "nasa",
+          "testbed"
+        ],
+        "train_attack_sources": [
+          "csic",
+          "testbed"
+        ],
+        "Bstar_n": 79995,
+        "Bstar_excluded_shared": 5,
+        "Astar_n": 39995,
+        "Astar_excluded_shared": 5
+      },
+      "fpr_0.01": {
+        "text_only": {
+          "heldout_benign_alert": 0.9947246702918933,
+          "heldout_attack_recall": 0.9978247280910114
+        },
+        "fused": {
+          "heldout_benign_alert": 1.0,
+          "heldout_attack_recall": 0.9990998874859357
+        }
+      },
+      "fpr_0.05": {
+        "text_only": {
+          "heldout_benign_alert": 0.9965872867054191,
+          "heldout_attack_recall": 0.9982997874734342
+        },
+        "fused": {
+          "heldout_benign_alert": 1.0,
+          "heldout_attack_recall": 0.9995999499937492
+        }
+      },
+      "wamm_manual": {
+        "n_top_alerts": 100,
+        "regex_marked_plausible_attack": 49,
+        "true_fp_estimate": 51
+      }
+    },
+    {
+      "Bstar": "nasa",
+      "Astar": "testbed",
+      "meta": {
+        "fit_benign": 83223,
+        "fit_attack": 39061,
+        "calib_benign": 12984,
+        "calib_attack": 6893,
+        "train_benign_sources": [
+          "calgary",
+          "clarknet",
+          "csic",
+          "srbh",
+          "zanbil"
+        ],
+        "train_attack_sources": [
+          "csic",
+          "srbh"
+        ],
+        "Bstar_n": 8427,
+        "Bstar_excluded_shared": 9,
+        "Astar_n": 5938,
+        "Astar_excluded_shared": 10
+      },
+      "fpr_0.01": {
+        "text_only": {
+          "heldout_benign_alert": 0.00011866619200189867,
+          "heldout_attack_recall": 0.024082182553048163
+        },
+        "fused": {
+          "heldout_benign_alert": 0.0,
+          "heldout_attack_recall": 0.10727517682721455
+        }
+      },
+      "fpr_0.05": {
+        "text_only": {
+          "heldout_benign_alert": 0.0009493295360151893,
+          "heldout_attack_recall": 0.042943752105085886
+        },
+        "fused": {
+          "heldout_benign_alert": 0.0,
+          "heldout_attack_recall": 0.25463118895250925
+        }
+      },
+      "wamm_manual": {
+        "n_top_alerts": 0,
+        "regex_marked_plausible_attack": 0,
+        "true_fp_estimate": 0
+      }
+    },
+    {
+      "Bstar": "srbh",
+      "Astar": "csic",
+      "meta": {
+        "fit_benign": 62709,
+        "fit_attack": 5056,
+        "calib_benign": 9750,
+        "calib_attack": 892,
+        "train_benign_sources": [
+          "calgary",
+          "clarknet",
+          "nasa",
+          "testbed",
+          "zanbil"
+        ],
+        "train_attack_sources": [
+          "testbed"
+        ],
+        "Bstar_n": 79991,
+        "Bstar_excluded_shared": 9,
+        "Astar_n": 15954,
+        "Astar_excluded_shared": 0
+      },
+      "fpr_0.01": {
+        "text_only": {
+          "heldout_benign_alert": 0.9804853045967671,
+          "heldout_attack_recall": 0.033909991224771216
+        },
+        "fused": {
+          "heldout_benign_alert": 0.9507319573452013,
+          "heldout_attack_recall": 0.06462329196439764
+        }
+      },
+      "fpr_0.05": {
+        "text_only": {
+          "heldout_benign_alert": 0.9941993474265854,
+          "heldout_attack_recall": 0.9984329948602232
+        },
+        "fused": {
+          "heldout_benign_alert": 0.99388681226638,
+          "heldout_attack_recall": 0.48295098407922776
+        }
+      },
+      "wamm_manual": {
+        "n_top_alerts": 100,
+        "regex_marked_plausible_attack": 92,
+        "true_fp_estimate": 8
+      }
+    },
+    {
+      "Bstar": "clarknet",
+      "Astar": "srbh",
+      "meta": {
+        "fit_benign": 56704,
+        "fit_attack": 18617,
+        "calib_benign": 6988,
+        "calib_attack": 3285,
+        "train_benign_sources": [
+          "calgary",
+          "csic",
+          "nasa",
+          "testbed",
+          "zanbil"
+        ],
+        "train_attack_sources": [
+          "csic",
+          "testbed"
+        ],
+        "Bstar_n": 18403,
+        "Bstar_excluded_shared": 8,
+        "Astar_n": 39995,
+        "Astar_excluded_shared": 5
+      },
+      "fpr_0.01": {
+        "text_only": {
+          "heldout_benign_alert": 0.0006520675976742922,
+          "heldout_attack_recall": 0.9480185023127891
+        },
+        "fused": {
+          "heldout_benign_alert": 0.04189534315057328,
+          "heldout_attack_recall": 0.9838479809976247
+        }
+      },
+      "fpr_0.05": {
+        "text_only": {
+          "heldout_benign_alert": 0.08558387219475086,
+          "heldout_attack_recall": 0.9887985998249781
+        },
+        "fused": {
+          "heldout_benign_alert": 0.1959463131011248,
+          "heldout_attack_recall": 0.9974996874609326
+        }
+      },
+      "wamm_manual": {
+        "n_top_alerts": 100,
+        "regex_marked_plausible_attack": 1,
+        "true_fp_estimate": 99
+      }
+    },
+    {
+      "Bstar": "calgary",
+      "Astar": "testbed",
+      "meta": {
+        "fit_benign": 83464,
+        "fit_attack": 39061,
+        "calib_benign": 13027,
+        "calib_attack": 6893,
+        "train_benign_sources": [
+          "clarknet",
+          "csic",
+          "nasa",
+          "srbh",
+          "zanbil"
+        ],
+        "train_attack_sources": [
+          "csic",
+          "srbh"
+        ],
+        "Bstar_n": 8151,
+        "Bstar_excluded_shared": 1,
+        "Astar_n": 5938,
+        "Astar_excluded_shared": 10
+      },
+      "fpr_0.01": {
+        "text_only": {
+          "heldout_benign_alert": 0.0,
+          "heldout_attack_recall": 0.026776692489053552
+        },
+        "fused": {
+          "heldout_benign_alert": 0.0,
+          "heldout_attack_recall": 0.1377568204782755
+        }
+      },
+      "fpr_0.05": {
+        "text_only": {
+          "heldout_benign_alert": 0.0,
+          "heldout_attack_recall": 0.04311215897608622
+        },
+        "fused": {
+          "heldout_benign_alert": 0.0,
+          "heldout_attack_recall": 0.32148871673964297
+        }
+      },
+      "wamm_manual": {
+        "n_top_alerts": 0,
+        "regex_marked_plausible_attack": 0,
+        "true_fp_estimate": 0
+      }
+    },
+    {
+      "Bstar": "zanbil",
+      "Astar": "testbed:custom",
+      "meta": {
+        "fit_benign": 72353,
+        "fit_attack": 41487,
+        "calib_benign": 9750,
+        "calib_attack": 7321,
+        "train_benign_sources": [
+          "calgary",
+          "clarknet",
+          "csic",
+          "nasa",
+          "srbh",
+          "testbed"
+        ],
+        "train_attack_sources": [
+          "csic",
+          "srbh",
+          "testbed"
+        ],
+        "Bstar_n": 79997,
+        "Bstar_excluded_shared": 3,
+        "Astar_n": 3088,
+        "Astar_excluded_shared": 6
+      },
+      "fpr_0.01": {
+        "text_only": {
+          "heldout_benign_alert": 0.1962198582446842,
+          "heldout_attack_recall": 0.19851036269430053
+        },
+        "fused": {
+          "heldout_benign_alert": 0.6925884720677026,
+          "heldout_attack_recall": 0.24093264248704663
+        }
+      },
+      "fpr_0.05": {
+        "text_only": {
+          "heldout_benign_alert": 0.5244446666750003,
+          "heldout_attack_recall": 0.2846502590673575
+        },
+        "fused": {
+          "heldout_benign_alert": 0.8155680838031426,
+          "heldout_attack_recall": 0.34196891191709844
+        }
+      },
+      "wamm_manual": {
+        "n_top_alerts": 100,
+        "regex_marked_plausible_attack": 88,
+        "true_fp_estimate": 12
+      }
+    }
+  ],
+  "config": {
+    "seed": 42,
+    "per_source_benign_cap": 30000,
+    "per_source_attack_cap": 30000,
+    "fpr_budgets": [
+      0.01,
+      0.05
+    ]
+  }
+}

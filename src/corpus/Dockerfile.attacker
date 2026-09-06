@@ -1,0 +1,28 @@
+# Attacker image: real attack tools in one pinned container, run per-campaign with a
+# distinct static IP on the corpus network so every tool's flows carry a distinct src_ip.
+# Tools: ffuf (SecLists-driven fuzzing), nuclei (template scanning), hydra (brute force),
+# sqlmap (SQLi), plus python+requests for the custom curated injectors.
+FROM python:3.12-slim@sha256:57cd7c3a7a273101a6485ba99423ee568157882804b1124b4dd04266317710de
+
+ARG FFUF_VERSION=2.1.0
+ARG NUCLEI_VERSION=3.11.0
+ARG TARGETARCH=arm64
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        hydra curl unzip ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN curl -fsSL "https://github.com/ffuf/ffuf/releases/download/v${FFUF_VERSION}/ffuf_${FFUF_VERSION}_linux_${TARGETARCH}.tar.gz" \
+      -o /tmp/ffuf.tgz \
+    && tar -xzf /tmp/ffuf.tgz -C /usr/local/bin ffuf && rm /tmp/ffuf.tgz \
+    && curl -fsSL "https://github.com/projectdiscovery/nuclei/releases/download/v${NUCLEI_VERSION}/nuclei_${NUCLEI_VERSION}_linux_${TARGETARCH}.zip" \
+      -o /tmp/nuclei.zip \
+    && unzip -o /tmp/nuclei.zip -d /usr/local/bin nuclei && rm /tmp/nuclei.zip
+
+RUN pip install --no-cache-dir requests==2.32.3 PyJWT==2.9.0 sqlmap==1.10.7
+
+# Bake nuclei templates so the scanner runs offline and reproducibly (records the
+# templates version fetched at build time; without this nuclei aborts "no templates").
+RUN nuclei -update-templates -disable-update-check 2>&1 | tail -3 || true
+
+WORKDIR /corpus

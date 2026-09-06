@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# venvs
+.venv/
+venv/
+# env/ holds the pinned dependency locks; it is not a virtualenv.
+
+# Jupyter / IDE / macOS
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+
+# Reproduction outputs. reproduce.sh rebuilds these; the reference values they are checked
+# against live in expected_metrics/, which is tracked. Ignored by extension rather than by
+# directory, so the one tracked file below can be re-included.
+/models/**/*.json
+/models/**/*.joblib
+/models/**/*.png
+/models/**/*.h5
+/models/**/*.meta.json
+/models/**/*.sig
+/models/**/*.csv
+!/models/.gitkeep
+# The family annotation record is an input to rebuild_family_sample.py and the family step,
+# not an output, so it is tracked. family_head.joblib is not: reproduce.sh runs lab_testbed to
+# rebuild it whenever it is missing, even under FAST=1.
+!/models/in_domain/family_labels.csv
+
+# Datasets, downloaded by scripts/fetch_data.sh. See the Datasets section of the README.
+/data/**
+!/data/.gitkeep
+
+# The main result figure is written by the `figure` step of reproduce.sh.
+/figures/
+
+# Logs / scratch
+logs/
+*.log
+*.tmp
+*.pid
+*.pid.lock
+
+# Kaggle credentials
+/.kaggle/
+.kagglehub/

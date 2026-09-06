@@ -1,0 +1,27 @@
+{
+  "campaign_id": "benign_crapi_07",
+  "app": "crapi",
+  "label": "benign",
+  "attack_family": null,
+  "attack_tool": null,
+  "src_ip": "172.30.0.17",
+  "start_ts": "2026-08-02T18:16:08.745Z",
+  "end_ts": "2026-08-02T18:18:01.031Z",
+  "extra": {
+    "n_users": 55,
+    "seed": 49,
+    "flows_sent": 450,
+    "feature_coverage": [
+      "community_post",
+      "community_read",
+      "coupon",
+      "dashboard",
+      "login",
+      "mechanic",
+      "order",
+      "shop_browse",
+      "signup",
+      "vehicle"
+    ]
+  }
+}

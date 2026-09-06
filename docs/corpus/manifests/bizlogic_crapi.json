@@ -1,0 +1,15 @@
+{
+  "campaign_id": "bizlogic_crapi",
+  "app": "crapi",
+  "label": "attack",
+  "attack_family": "business_logic_abuse",
+  "attack_tool": "custom",
+  "src_ip": "172.30.0.32",
+  "start_ts": "2026-08-02T18:23:10.277Z",
+  "end_ts": "2026-08-02T18:23:13.031Z",
+  "extra": {
+    "seed": 42,
+    "rows_sent": 200,
+    "attacker": "a569499027710@x.co"
+  }
+}

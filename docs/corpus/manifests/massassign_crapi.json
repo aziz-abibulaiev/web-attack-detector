@@ -1,0 +1,15 @@
+{
+  "campaign_id": "massassign_crapi",
+  "app": "crapi",
+  "label": "attack",
+  "attack_family": "mass_assignment",
+  "attack_tool": "custom",
+  "src_ip": "172.30.0.31",
+  "start_ts": "2026-08-02T18:23:06.974Z",
+  "end_ts": "2026-08-02T18:23:09.883Z",
+  "extra": {
+    "seed": 42,
+    "rows_sent": 200,
+    "attacker": "a569498697410@x.co"
+  }
+}

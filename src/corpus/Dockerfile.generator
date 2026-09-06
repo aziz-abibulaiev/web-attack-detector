@@ -1,0 +1,12 @@
+# Traffic-generator image: runs both the benign driver and the real attack tools.
+# Pinned so a campaign's tool set is reproducible even where a tool's request ordering
+# is not. Same image for benign and attack; role differs only by which script runs and
+# by the static IP the container is given on the corpus network.
+FROM python:3.12-slim@sha256:57cd7c3a7a273101a6485ba99423ee568157882804b1124b4dd04266317710de
+
+RUN pip install --no-cache-dir \
+    requests==2.32.3 \
+    PyJWT==2.9.0 \
+    sqlmap==1.10.7
+
+WORKDIR /corpus

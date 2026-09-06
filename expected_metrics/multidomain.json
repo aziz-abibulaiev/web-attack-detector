@@ -1,0 +1,67 @@
+{
+  "config": {
+    "seed": 42,
+    "budgets": [
+      0.01,
+      0.05
+    ],
+    "modsec_available": true,
+    "modsec_n": 15262
+  },
+  "domains": {
+    "zanbil": {
+      "split_method": "temporal@2019-01-25 04:20:40.500000+00:00",
+      "benign_train": 120000,
+      "benign_calib": 25000,
+      "benign_test_late": 100000,
+      "attack_train": 62854,
+      "fpr_0.01": {
+        "late_benign_alert": 0.00446,
+        "srbh_recall_in_dist": 1.0,
+        "testbed_custom_cross_tool_recall": 0.9990303813833226,
+        "modsec_recall": 0.9292360110077316,
+        "late_benign_fp_corrected": 0.0029882000000000003
+      },
+      "fpr_0.05": {
+        "late_benign_alert": 0.02591,
+        "srbh_recall_in_dist": 1.0,
+        "testbed_custom_cross_tool_recall": 1.0,
+        "modsec_recall": 0.9779845367579609,
+        "late_benign_fp_corrected": 0.0173597
+      },
+      "wamm_manual": {
+        "n_top": 100,
+        "regex_marked_plausible_attack": 33,
+        "true_fp_est": 67
+      },
+      "cross_source_heldout_fp_reference": 0.995
+    },
+    "srbh": {
+      "split_method": "temporal@2020-07-18 05:27:50+00:00",
+      "benign_train": 54117,
+      "benign_calib": 9549,
+      "benign_test_late": 27290,
+      "attack_train": 62854,
+      "fpr_0.01": {
+        "late_benign_alert": 0.5345547819714181,
+        "srbh_recall_in_dist": 0.96655,
+        "testbed_custom_cross_tool_recall": 0.9524886877828054,
+        "modsec_recall": 0.8985716157777487,
+        "late_benign_fp_corrected": 0.0
+      },
+      "fpr_0.05": {
+        "late_benign_alert": 0.9271528032246245,
+        "srbh_recall_in_dist": 0.990325,
+        "testbed_custom_cross_tool_recall": 0.9922430510665805,
+        "modsec_recall": 0.9904992792556677,
+        "late_benign_fp_corrected": 0.0
+      },
+      "wamm_manual": {
+        "n_top": 100,
+        "regex_marked_plausible_attack": 100,
+        "true_fp_est": 0
+      },
+      "cross_source_heldout_fp_reference": 0.98
+    }
+  }
+}

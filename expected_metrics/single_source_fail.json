@@ -1,0 +1,135 @@
+{
+  "A1": {
+    "fpr_test_source": "zanbil",
+    "n": {
+      "fpr_benign": 199997,
+      "srbh_attack": 100000,
+      "testbed_test_attack": 2120
+    },
+    "fpr_test_shared_excluded": 3,
+    "train_benign_n": 74514,
+    "train_attack_n": 6743,
+    "fpr_0.01": {
+      "thresholds": {
+        "text": 0.019337087519798624,
+        "numeric": 3.991406528284297e-05,
+        "content": 2.0392930711564794e-05
+      },
+      "heldout_benign_alert_rate": {
+        "text": 0.9361840427606414,
+        "numeric": 0.6487397310959664,
+        "content": 0.9034485517282759
+      },
+      "srbh_attack_recall": {
+        "text": 0.01214,
+        "numeric": 0.22968,
+        "content": 0.05832
+      },
+      "testbed_test_recall": {
+        "text": 1.0,
+        "numeric": 0.9622641509433962,
+        "content": 1.0
+      }
+    },
+    "fpr_0.05": {
+      "thresholds": {
+        "text": 0.0019570929708792517,
+        "numeric": 7.997885055998599e-06,
+        "content": 1.5901982929936795e-06
+      },
+      "heldout_benign_alert_rate": {
+        "text": 0.9919698795481933,
+        "numeric": 0.8553178297674465,
+        "content": 0.9993349900248504
+      },
+      "srbh_attack_recall": {
+        "text": 0.1424,
+        "numeric": 0.34303,
+        "content": 0.36652
+      },
+      "testbed_test_recall": {
+        "text": 1.0,
+        "numeric": 1.0,
+        "content": 1.0
+      }
+    },
+    "roc_auc_content_real": 0.018202320334805025,
+    "pr_auc_content_real": 0.18960115122933532,
+    "manual_inspection": {
+      "n_inspected": 100,
+      "regex_marked_plausible_attack": 0,
+      "true_fp_estimate": 100,
+      "note": "regex used as inspection aid only; alert-rate is an upper bound (WAMM: real benign carries ~9-10% hidden attacks)"
+    }
+  },
+  "A2": {
+    "fpr_test_source": "srbh_benign",
+    "n": {
+      "fpr_benign": 90954,
+      "srbh_attack": 100000,
+      "testbed_test_attack": 2120
+    },
+    "fpr_test_shared_excluded": 3,
+    "train_benign_n": 108810,
+    "train_attack_n": 6743,
+    "fpr_0.01": {
+      "thresholds": {
+        "text": 0.017694813851830853,
+        "numeric": 1.3250068438163841e-05,
+        "content": 5.14445256038527e-05
+      },
+      "heldout_benign_alert_rate": {
+        "text": 0.9948105635815907,
+        "numeric": 0.9588803131253161,
+        "content": 0.9972403632605493
+      },
+      "srbh_attack_recall": {
+        "text": 0.98861,
+        "numeric": 0.94539,
+        "content": 0.99496
+      },
+      "testbed_test_recall": {
+        "text": 1.0,
+        "numeric": 1.0,
+        "content": 1.0
+      }
+    },
+    "fpr_0.05": {
+      "thresholds": {
+        "text": 0.004681852987218405,
+        "numeric": 2.4585681728044804e-06,
+        "content": 1.1585467612763735e-05
+      },
+      "heldout_benign_alert_rate": {
+        "text": 0.9997801086263386,
+        "numeric": 0.9900059370670888,
+        "content": 1.0
+      },
+      "srbh_attack_recall": {
+        "text": 0.99803,
+        "numeric": 0.99397,
+        "content": 0.99914
+      },
+      "testbed_test_recall": {
+        "text": 1.0,
+        "numeric": 1.0,
+        "content": 1.0
+      }
+    },
+    "roc_auc_content_real": 0.5082442883215692,
+    "pr_auc_content_real": 0.5684054348753202,
+    "manual_inspection": {
+      "n_inspected": 100,
+      "regex_marked_plausible_attack": 93,
+      "true_fp_estimate": 7,
+      "note": "regex used as inspection aid only; alert-rate is an upper bound (WAMM: real benign carries ~9-10% hidden attacks)"
+    }
+  },
+  "config": {
+    "seed": 42,
+    "real_benign_train_frac": 0.7,
+    "zanbil_train_sample": 140000,
+    "srbh_attack_eval_sample": 100000,
+    "wamm_hidden_attack_rate": 0.095
+  }
+}

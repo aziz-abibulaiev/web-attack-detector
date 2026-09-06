@@ -1,0 +1,15 @@
+{
+  "campaign_id": "bola_crapi",
+  "app": "crapi",
+  "label": "attack",
+  "attack_family": "bola_idor",
+  "attack_tool": "custom",
+  "src_ip": "172.30.0.30",
+  "start_ts": "2026-08-02T18:23:01.650Z",
+  "end_ts": "2026-08-02T18:23:06.544Z",
+  "extra": {
+    "seed": 42,
+    "rows_sent": 200,
+    "attacker": "a569498165010@x.co"
+  }
+}

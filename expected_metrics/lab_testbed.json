@@ -1,0 +1,549 @@
+{
+  "split_stats": {
+    "splits": {
+      "train": {
+        "rows": 13025,
+        "sessions": 668,
+        "benign": 7026,
+        "attack": 5999,
+        "attack_by_family": {
+          "cred_stuffing": 622,
+          "brute_force": 621,
+          "cmd_injection": 600,
+          "scan": 600,
+          "path_traversal": 598,
+          "ssrf": 598,
+          "resource_exhaustion": 592,
+          "sqli": 570,
+          "xss": 565,
+          "nosql_injection": 255,
+          "bola_idor": 202,
+          "ssti": 176
+        }
+      },
+      "calib": {
+        "rows": 3075,
+        "sessions": 218,
+        "benign": 2261,
+        "attack": 814,
+        "attack_by_family": {
+          "cred_stuffing": 207,
+          "brute_force": 206,
+          "mass_assignment": 202,
+          "resource_exhaustion": 199
+        }
+      },
+      "test": {
+        "rows": 5036,
+        "sessions": 182,
+        "benign": 1621,
+        "attack": 3415,
+        "attack_by_family": {
+          "ssti": 500,
+          "nosql_injection": 500,
+          "ssrf": 500,
+          "scan": 500,
+          "cred_stuffing": 208,
+          "brute_force": 207,
+          "business_logic_abuse": 202,
+          "resource_exhaustion": 198,
+          "sqli": 150,
+          "xss": 150,
+          "path_traversal": 150,
+          "cmd_injection": 150
+        }
+      }
+    },
+    "session_overlaps": {},
+    "disjoint": true
+  },
+  "config": {
+    "tfidf": {
+      "analyzer": "char",
+      "ngram_range": [
+        3,
+        5
+      ],
+      "min_df": 2,
+      "lowercase": false,
+      "sublinear_tf": true
+    },
+    "logreg": {
+      "class_weight": "balanced",
+      "max_iter": 2000,
+      "C": 1.0,
+      "solver": "liblinear",
+      "random_state": 42
+    },
+    "hgb": {
+      "learning_rate": 0.1,
+      "max_iter": 300,
+      "max_depth": null,
+      "max_leaf_nodes": 31,
+      "l2_regularization": 1.0,
+      "early_stopping": false,
+      "random_state": 42
+    },
+    "fusion": "mean_logit",
+    "fusion_weights": [
+      0.5,
+      0.5
+    ],
+    "fpr_budgets": [
+      0.01,
+      0.05
+    ],
+    "seed": 42
+  },
+  "partA": {
+    "fpr_0.01": {
+      "p_text": {
+        "roc_auc": 0.9876368274016997,
+        "pr_auc": 0.9943245029432363,
+        "f1": 0.8969072164948454,
+        "precision": 0.9967776584317938,
+        "recall": 0.8152269399707174,
+        "fpr": 0.005552128315854411,
+        "threshold": 0.34091491419791464
+      },
+      "p_numeric": {
+        "roc_auc": 0.9645758497321484,
+        "pr_auc": 0.981494236550529,
+        "f1": 0.8122762148337596,
+        "precision": 0.9722448979591837,
+        "recall": 0.697510980966325,
+        "fpr": 0.041949413942011106,
+        "threshold": 0.23735407739145298
+      },
+      "p_content": {
+        "roc_auc": 0.9822032022963609,
+        "pr_auc": 0.9915309910084591,
+        "f1": 0.9115625,
+        "precision": 0.9772194304857621,
+        "recall": 0.8541727672035139,
+        "fpr": 0.041949413942011106,
+        "threshold": 0.47571629926164327
+      }
+    },
+    "fpr_0.05": {
+      "p_text": {
+        "roc_auc": 0.9876368274016997,
+        "pr_auc": 0.9943245029432363,
+        "f1": 0.9517054029580441,
+        "precision": 0.9819370912488321,
+        "recall": 0.9232796486090776,
+        "fpr": 0.03578038247995065,
+        "threshold": 0.1389773914808836
+      },
+      "p_numeric": {
+        "roc_auc": 0.9645758497321484,
+        "pr_auc": 0.981494236550529,
+        "f1": 0.8112382234185733,
+        "precision": 0.9533412415974694,
+        "recall": 0.7060029282576866,
+        "fpr": 0.07279457125231338,
+        "threshold": 0.17375887155671316
+      },
+      "p_content": {
+        "roc_auc": 0.9822032022963609,
+        "pr_auc": 0.9915309910084591,
+        "f1": 0.9080513058259929,
+        "precision": 0.9613874345549738,
+        "recall": 0.8603221083455344,
+        "fpr": 0.07279457125231338,
+        "threshold": 0.4370159938690377
+      }
+    }
+  },
+  "partB": {
+    "sqli": {
+      "A_ffuf_to_B_custom": {
+        "recall_heldout": 0.8933333333333333,
+        "benign_fpr": 0.016039481801357187,
+        "n_train_attack": 456,
+        "n_test_attack": 150
+      },
+      "B_custom_to_A_ffuf": {
+        "recall_heldout": 0.8631578947368421,
+        "benign_fpr": 0.032078963602714373,
+        "n_train_attack": 120,
+        "n_test_attack": 570
+      }
+    },
+    "xss": {
+      "A_ffuf_to_B_custom": {
+        "recall_heldout": 0.92,
+        "benign_fpr": 0.012338062924120914,
+        "n_train_attack": 452,
+        "n_test_attack": 150
+      },
+      "B_custom_to_A_ffuf": {
+        "recall_heldout": 1.0,
+        "benign_fpr": 0.03948180135718692,
+        "n_train_attack": 120,
+        "n_test_attack": 565
+      }
+    },
+    "cmd_injection": {
+      "A_ffuf_to_B_custom": {
+        "recall_heldout": 0.16666666666666666,
+        "benign_fpr": 0.012954966070326958,
+        "n_train_attack": 480,
+        "n_test_attack": 150
+      },
+      "B_custom_to_A_ffuf": {
+        "recall_heldout": 1.0,
+        "benign_fpr": 0.008019740900678593,
+        "n_train_attack": 120,
+        "n_test_attack": 600
+      }
+    },
+    "ssti": {
+      "A_ffuf_to_B_custom": {
+        "recall_heldout": 0.562,
+        "benign_fpr": 0.01727328809376928,
+        "n_train_attack": 141,
+        "n_test_attack": 500
+      },
+      "B_custom_to_A_ffuf": {
+        "recall_heldout": 0.6818181818181818,
+        "benign_fpr": 0.020974706971005553,
+        "n_train_attack": 400,
+        "n_test_attack": 176
+      }
+    },
+    "_shared_dropped": {
+      "path_traversal": 4,
+      "scan": 9
+    },
+    "path_traversal": {
+      "A_ffuf_to_B_custom": {
+        "recall_heldout": 0.7132352941176471,
+        "benign_fpr": 0.01727328809376928,
+        "n_train_attack": 476,
+        "n_test_attack": 136
+      },
+      "B_custom_to_A_ffuf": {
+        "recall_heldout": 0.9949494949494949,
+        "benign_fpr": 0.04380012338062924,
+        "n_train_attack": 109,
+        "n_test_attack": 594
+      }
+    },
+    "scan": {
+      "A_ffuf_to_B_custom": {
+        "recall_heldout": 0.49065420560747663,
+        "benign_fpr": 0.016656384947563233,
+        "n_train_attack": 473,
+        "n_test_attack": 428
+      },
+      "B_custom_to_A_ffuf": {
+        "recall_heldout": 1.0,
+        "benign_fpr": 0.009253547193090685,
+        "n_train_attack": 343,
+        "n_test_attack": 591
+      }
+    },
+    "_excluded_binary_only": [
+      "nosql_injection",
+      "ssrf"
+    ]
+  },
+  "partC": {
+    "primary_fpr": 0.01,
+    "n_marked": 823,
+    "n_marker_free": 2592,
+    "marked": {
+      "p_text": 0.9027946537059538,
+      "p_numeric": 0.8359659781287971,
+      "p_content": 0.9562575941676792
+    },
+    "marker_free": {
+      "p_text": 0.7874228395061729,
+      "p_numeric": 0.6535493827160493,
+      "p_content": 0.8217592592592593
+    }
+  },
+  "partD": {
+    "note": "TESTBED-MEASURED, not real-traffic-validated",
+    "labels": [
+      "bola_idor",
+      "brute_force",
+      "business_logic_abuse",
+      "cmd_injection",
+      "cred_stuffing",
+      "nosql_injection",
+      "path_traversal",
+      "resource_exhaustion",
+      "scan",
+      "sqli",
+      "ssrf",
+      "ssti",
+      "xss"
+    ],
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        207,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        202,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        23,
+        52,
+        0,
+        8,
+        12,
+        20,
+        23,
+        12,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        208,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        273,
+        0,
+        0,
+        227,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        146,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        198,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        16,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        476,
+        0,
+        8,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        12,
+        66,
+        0,
+        0,
+        5,
+        64,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        92,
+        0,
+        0,
+        246,
+        59,
+        27,
+        76,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        25,
+        75,
+        100,
+        0,
+        50,
+        50,
+        0,
+        25,
+        175,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        6,
+        4,
+        0,
+        4,
+        134
+      ]
+    ],
+    "per_family": {
+      "bola_idor": {
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "brute_force": {
+        "support": 207,
+        "precision": 0.42946058091286304,
+        "recall": 1.0
+      },
+      "business_logic_abuse": {
+        "support": 202,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "cmd_injection": {
+        "support": 150,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "cred_stuffing": {
+        "support": 208,
+        "precision": 0.3802559414990859,
+        "recall": 1.0
+      },
+      "nosql_injection": {
+        "support": 500,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "path_traversal": {
+        "support": 150,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "resource_exhaustion": {
+        "support": 198,
+        "precision": 0.7734375,
+        "recall": 1.0
+      },
+      "scan": {
+        "support": 500,
+        "precision": 0.5987421383647799,
+        "recall": 0.952
+      },
+      "sqli": {
+        "support": 150,
+        "precision": 0.42953020134228187,
+        "recall": 0.4266666666666667
+      },
+      "ssrf": {
+        "support": 500,
+        "precision": 0.11790393013100436,
+        "recall": 0.054
+      },
+      "ssti": {
+        "support": 500,
+        "precision": 0.6481481481481481,
+        "recall": 0.35
+      },
+      "xss": {
+        "support": 150,
+        "precision": 1.0,
+        "recall": 0.8933333333333333
+      }
+    }
+  }
+}

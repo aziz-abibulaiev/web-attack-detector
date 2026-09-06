@@ -1,0 +1,15 @@
+{
+  "campaign_id": "cmd_vampi_custom",
+  "app": "vampi",
+  "label": "attack",
+  "attack_family": "cmd_injection",
+  "attack_tool": "custom",
+  "src_ip": "172.30.0.24",
+  "start_ts": "2026-08-02T18:21:39.435Z",
+  "end_ts": "2026-08-02T18:21:41.398Z",
+  "extra": {
+    "seed": 42,
+    "rows_sent": 150,
+    "min_rows": 150
+  }
+}

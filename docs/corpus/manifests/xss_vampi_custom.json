@@ -1,0 +1,15 @@
+{
+  "campaign_id": "xss_vampi_custom",
+  "app": "vampi",
+  "label": "attack",
+  "attack_family": "xss",
+  "attack_tool": "custom",
+  "src_ip": "172.30.0.24",
+  "start_ts": "2026-08-02T18:21:32.673Z",
+  "end_ts": "2026-08-02T18:21:33.795Z",
+  "extra": {
+    "seed": 42,
+    "rows_sent": 150,
+    "min_rows": 150
+  }
+}

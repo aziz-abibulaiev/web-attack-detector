@@ -1,0 +1,15 @@
+{
+  "campaign_id": "nosql_vampi_custom",
+  "app": "vampi",
+  "label": "attack",
+  "attack_family": "nosql_injection",
+  "attack_tool": "custom",
+  "src_ip": "172.30.0.24",
+  "start_ts": "2026-08-02T18:21:47.211Z",
+  "end_ts": "2026-08-02T18:21:48.370Z",
+  "extra": {
+    "seed": 42,
+    "rows_sent": 500,
+    "min_rows": 500
+  }
+}

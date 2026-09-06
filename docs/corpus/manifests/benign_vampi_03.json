@@ -1,0 +1,15 @@
+{
+  "campaign_id": "benign_vampi_03",
+  "app": "vampi",
+  "label": "benign",
+  "attack_family": null,
+  "attack_tool": null,
+  "src_ip": "172.30.0.13",
+  "start_ts": "2026-08-02T18:16:08.618Z",
+  "end_ts": "2026-08-02T18:21:12.722Z",
+  "extra": {
+    "n_users": 240,
+    "seed": 45,
+    "flows_sent": 2481
+  }
+}

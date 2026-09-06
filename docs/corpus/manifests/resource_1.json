@@ -1,0 +1,16 @@
+{
+  "campaign_id": "resource_1",
+  "app": "vampi",
+  "label": "attack",
+  "attack_family": "resource_exhaustion",
+  "attack_tool": "custom",
+  "src_ip": "172.30.0.61",
+  "start_ts": "2026-08-02T18:22:03.066Z",
+  "end_ts": "2026-08-02T18:22:58.108Z",
+  "extra": {
+    "seed": 42,
+    "rows_sent": 99,
+    "duration": 55.0,
+    "rate": 2.0
+  }
+}

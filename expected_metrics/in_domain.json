@@ -1,0 +1,33 @@
+{
+  "split": {
+    "boundary": "2019-01-25 04:20:40.500000+00:00",
+    "temporal": true,
+    "train_benign": 150000,
+    "calib_benign": 30000,
+    "test_benign_late": 150000,
+    "train_attack": 53426,
+    "srbh_test_attack": 40000,
+    "testbed_heldout_tool": "custom",
+    "testbed_tool_test": 3094
+  },
+  "cross_source_v2_zanbil_heldout_fp": 0.995,
+  "fpr_0.01": {
+    "threshold": 0.011839838946693586,
+    "late_zanbil_alert_rate": 0.0042,
+    "srbh_attack_recall": 1.0,
+    "testbed_tool_recall": 0.9990303813833226,
+    "late_zanbil_fp_corrected_est": 0.0028979999999999995
+  },
+  "fpr_0.05": {
+    "threshold": 0.0038147205296042794,
+    "late_zanbil_alert_rate": 0.0264,
+    "srbh_attack_recall": 1.0,
+    "testbed_tool_recall": 1.0,
+    "late_zanbil_fp_corrected_est": 0.018216
+  },
+  "wamm_manual": {
+    "n_top_alerts": 100,
+    "regex_marked_plausible_attack": 31,
+    "true_fp_estimate": 69
+  }
+}

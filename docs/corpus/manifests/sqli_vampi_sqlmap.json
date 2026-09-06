@@ -1,0 +1,31 @@
+{
+  "campaign_id": "sqli_vampi_sqlmap",
+  "app": "vampi",
+  "label": "attack",
+  "attack_family": "sqli",
+  "attack_tool": "sqlmap",
+  "src_ip": "172.30.0.21",
+  "start_ts": "2026-08-02T18:21:19.774Z",
+  "end_ts": "2026-08-02T18:21:20.927Z",
+  "extra": {
+    "tool_version": "1.10.7#pip",
+    "invocation": [
+      "sqlmap",
+      "-u",
+      "http://172.30.0.3:8080/users/v1/admin",
+      "--batch",
+      "--level=5",
+      "--risk=3",
+      "--fresh-queries",
+      "--flush-session",
+      "--technique=BEUST",
+      "--random-agent",
+      "--output-dir=/tmp/sqlmap_sqli_vampi_sqlmap",
+      "--disable-coloring"
+    ],
+    "endpoint": "/users/v1/admin",
+    "level": 5,
+    "risk": 3,
+    "returncode": 0
+  }
+}

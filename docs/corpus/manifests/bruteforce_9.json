@@ -1,0 +1,16 @@
+{
+  "campaign_id": "bruteforce_9",
+  "app": "vampi",
+  "label": "attack",
+  "attack_family": "brute_force",
+  "attack_tool": "hydra",
+  "src_ip": "172.30.0.49",
+  "start_ts": "2026-08-02T18:22:05.038Z",
+  "end_ts": "2026-08-02T18:23:00.201Z",
+  "extra": {
+    "seed": 42,
+    "rows_sent": 103,
+    "duration": 55.0,
+    "rate": 2.0
+  }
+}

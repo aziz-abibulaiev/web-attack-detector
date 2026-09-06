@@ -1,0 +1,16 @@
+{
+  "primary_fpr_budget": 0.01,
+  "threshold": 0.47571629926164327,
+  "zanbil_sample": {
+    "n": 200000,
+    "alert_rate": 0.829705
+  },
+  "srbh_benign": {
+    "n": 525195,
+    "alert_rate": 0.6014070964118089
+  },
+  "srbh_attack": {
+    "n": 382620,
+    "recall": 0.9610422873869635
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "n_sample": 100,
+  "labelling_rubric": "Read the fixed-point-decoded HTTP request; assign one dominant attack family from {sqli,xss,cmd_injection,ssti,path_traversal,ssrf,scan,other} by the first/strongest attack marker (see family_eval.py header for the marker map).",
+  "family_label_distribution": {
+    "sqli": 51,
+    "ssrf": 14,
+    "cmd_injection": 8,
+    "path_traversal": 8,
+    "other": 8,
+    "ssti": 6,
+    "scan": 5
+  },
+  "label_vs_regex_agreement": {
+    "agreement_rate": 0.9298245614035088,
+    "n_regex_fired": 57,
+    "note": "automated cross-check (family label vs detection regex); labels manually verified by the author (100/100 confirmed)"
+  },
+  "family_head_on_real": {
+    "note": "Labelled under a fixed declared rubric and manually verified by the author (100/100 confirmed); independently regex-cross-checked. Family head is testbed-trained.",
+    "overall_accuracy": 0.2,
+    "per_family": {
+      "cmd_injection": {
+        "support_labelled": 8,
+        "precision": null,
+        "recall": 0.0
+      },
+      "nosql_injection": {
+        "support_labelled": 0,
+        "precision": 0.0,
+        "recall": null
+      },
+      "other": {
+        "support_labelled": 8,
+        "precision": null,
+        "recall": 0.0
+      },
+      "path_traversal": {
+        "support_labelled": 8,
+        "precision": null,
+        "recall": 0.0
+      },
+      "scan": {
+        "support_labelled": 5,
+        "precision": 0.0684931506849315,
+        "recall": 1.0
+      },
+      "sqli": {
+        "support_labelled": 51,
+        "precision": 1.0,
+        "recall": 0.29411764705882354
+      },
+      "ssrf": {
+        "support_labelled": 14,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "ssti": {
+        "support_labelled": 6,
+        "precision": null,
+        "recall": 0.0
+      }
+    }
+  }
+}

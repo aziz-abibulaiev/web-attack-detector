@@ -1,0 +1,109 @@
+{
+  "config": {
+    "seed": 42,
+    "budgets": [
+      0.01,
+      0.05
+    ],
+    "modsec_n": 15262,
+    "attack_train_n": 62854
+  },
+  "part_a_weblog": {
+    "split_method": "temporal@2025-04-20 07:50:59+00:00",
+    "benign_train": 120000,
+    "benign_calib": 25000,
+    "benign_test_late": 100000,
+    "attack_train": 62854,
+    "weblog_attack_n": 129,
+    "fpr_0.01": {
+      "late_benign_alert": 0.20024,
+      "srbh_recall": 1.0,
+      "testbed_custom_cross_tool_recall": 1.0,
+      "modsec_recall": 0.9336915214257633,
+      "weblog_attack_recall": 0.751937984496124,
+      "late_benign_fp_corrected": 0.19022799999999998
+    },
+    "fpr_0.05": {
+      "late_benign_alert": 0.6032,
+      "srbh_recall": 1.0,
+      "testbed_custom_cross_tool_recall": 1.0,
+      "modsec_recall": 1.0,
+      "weblog_attack_recall": 1.0,
+      "late_benign_fp_corrected": 0.5730399999999999
+    },
+    "weblog_attack_recall_by_rule@1pct": {
+      "file_inclusion": {
+        "n": 113,
+        "recall": 0.7168141592920354
+      },
+      "bruteforce_login_web": {
+        "n": 12,
+        "recall": 1.0
+      },
+      "dir_scan": {
+        "n": 4,
+        "recall": 1.0
+      }
+    },
+    "wamm_manual": {
+      "n_top": 100,
+      "regex_marked_plausible_attack": 5,
+      "true_fp_est": 95
+    },
+    "hash_split_control": {
+      "split": "hash70",
+      "benign_test": 100000,
+      "fp_0.01": 0.0099,
+      "fp_0.05": 0.04968,
+      "fp_0.01_wamm_corrected": 0.009009000000000001,
+      "wamm": {
+        "n_top": 100,
+        "plausible_attack": 9,
+        "true_fp": 91
+      }
+    }
+  },
+  "part_b_edgar": {
+    "edgar_benign_unique": 1661635,
+    "cross_domain_zanbil_model": {
+      "prompt_threshold": 0.0118,
+      "model_own_1pct_threshold": 0.012871410532405357,
+      "edgar_alert_rate@prompt_thr": 1.0,
+      "edgar_alert_rate@own_1pct": 1.0,
+      "wamm_top50": {
+        "n_top": 50,
+        "regex_marked": 0,
+        "true_fp_est": 50
+      }
+    },
+    "cross_domain_zanbil_on_weblog": {
+      "weblog_alert_rate@prompt_thr": 0.9740316291589969,
+      "weblog_alert_rate@own_1pct": 0.9698645501388806
+    },
+    "in_domain": {
+      "split_method": "temporal@2017-05-02 00:01:40+00:00",
+      "benign_train": 120000,
+      "benign_calib": 25000,
+      "benign_test_late": 100000,
+      "fpr_0.01": {
+        "late_benign_alert": 0.00608,
+        "srbh_recall": 1.0,
+        "testbed_custom_cross_tool_recall": 1.0,
+        "modsec_recall": 1.0,
+        "late_benign_fp_corrected": 0.00608
+      },
+      "fpr_0.05": {
+        "late_benign_alert": 0.0297,
+        "srbh_recall": 1.0,
+        "testbed_custom_cross_tool_recall": 1.0,
+        "modsec_recall": 1.0,
+        "late_benign_fp_corrected": 0.0297
+      },
+      "wamm_manual": {
+        "n_top": 100,
+        "regex_marked_plausible_attack": 0,
+        "true_fp_est": 100
+      }
+    }
+  }
+}

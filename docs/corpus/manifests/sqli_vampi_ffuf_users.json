@@ -1,0 +1,27 @@
+{
+  "campaign_id": "sqli_vampi_ffuf_users",
+  "app": "vampi",
+  "label": "attack",
+  "attack_family": "sqli",
+  "attack_tool": "ffuf",
+  "src_ip": "172.30.0.22",
+  "start_ts": "2026-08-02T18:21:21.211Z",
+  "end_ts": "2026-08-02T18:21:21.973Z",
+  "extra": {
+    "invocation": [
+      "ffuf",
+      "-u",
+      "http://172.30.0.3:8080/users/v1/FUZZ",
+      "-w",
+      "/data/wordlists/sqli.txt",
+      "-mc",
+      "all",
+      "-t",
+      "15",
+      "-s",
+      "-H",
+      "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    ],
+    "returncode": 0
+  }
+}
