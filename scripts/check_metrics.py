@@ -37,6 +37,8 @@ MAPPING = {
     "adversarial":        ("models/adversarial/adversarial_results.json",    "adversarial.json"),
     "weblog_edgar":       ("models/weblog_edgar/weblog_edgar_results.json",  "weblog_edgar.json"),
     "multisite_coverage": ("models/weblog_edgar/multisite_coverage_results.json", "multisite_coverage.json"),
+    "representation_coverage": ("models/coverage/representation_coverage_results.json", "representation_coverage.json"),
+    "ablation_positives": ("models/in_domain/ablation_positives_results.json", "ablation_positives.json"),
 }
 
 

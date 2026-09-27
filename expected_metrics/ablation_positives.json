@@ -1,0 +1,50 @@
+{
+  "n_fit_attack": {
+    "A_all_families": 53426,
+    "B_content_only": 53408
+  },
+  "n_testbed_removed_in_B": 18,
+  "removed_families": [
+    "brute_force"
+  ],
+  "A_all_families": {
+    "fpr_0.01": {
+      "threshold": 0.011839838946693586,
+      "late_zanbil_alert_rate": 0.0042,
+      "srbh_attack_recall": 1.0,
+      "testbed_custom_tool_recall": 0.9990303813833226,
+      "modsec_recall": 0.9304154108242694
+    },
+    "fpr_0.05": {
+      "threshold": 0.0038147205296042794,
+      "late_zanbil_alert_rate": 0.0264,
+      "srbh_attack_recall": 1.0,
+      "testbed_custom_tool_recall": 1.0,
+      "modsec_recall": 0.9779190145459311
+    },
+    "custom_tool_recall_content_families@1pct": 0.9979395604395604,
+    "custom_tool_recall_other_families@1pct": 1.0,
+    "n_custom_tool_content": 1456,
+    "n_custom_tool_other": 1638
+  },
+  "B_content_only": {
+    "fpr_0.01": {
+      "threshold": 0.011650621631644433,
+      "late_zanbil_alert_rate": 0.004166666666666667,
+      "srbh_attack_recall": 1.0,
+      "testbed_custom_tool_recall": 0.9718810601163542,
+      "modsec_recall": 0.9253702004979688
+    },
+    "fpr_0.05": {
+      "threshold": 0.003688408958707637,
+      "late_zanbil_alert_rate": 0.026166666666666668,
+      "srbh_attack_recall": 1.0,
+      "testbed_custom_tool_recall": 1.0,
+      "modsec_recall": 0.9773948368496921
+    },
+    "custom_tool_recall_content_families@1pct": 0.9567307692307693,
+    "custom_tool_recall_other_families@1pct": 0.9853479853479854,
+    "n_custom_tool_content": 1456,
+    "n_custom_tool_other": 1638
+  }
+}

@@ -25,8 +25,9 @@ PY="${PYTHON:-python}"
 #   adversarial and weblog_edgar load models/multidomain/text_only_zanbil.joblib -> after multidomain
 #   multisite loads models/weblog_edgar/text_only_weblog.joblib    -> after weblog_edgar
 #   family reads the SR-BH sample that sample rebuilds             -> after sample
-ALL_STEPS="lab_testbed lab_external single_source loso in_domain ml_vs_rules multidomain adversarial weblog_edgar multisite sample family figure"
-HEAVY_STEPS=" lab_testbed lab_external single_source loso "     # skipped when FAST=1 (padded with spaces for word-match)
+# ablation_positives and coverage load no model; they sit next to the steps whose splits they reuse.
+ALL_STEPS="lab_testbed lab_external single_source loso in_domain ablation_positives ml_vs_rules multidomain adversarial weblog_edgar multisite coverage sample family figure"
+HEAVY_STEPS=" lab_testbed lab_external single_source loso ablation_positives coverage "     # skipped when FAST=1 (padded with spaces for word-match)
 
 step_module() {   # echo the module name for a step, or empty if unknown
   case "$1" in
@@ -35,11 +36,13 @@ step_module() {   # echo the module name for a step, or empty if unknown
     single_source) echo single_source_eval ;;
     loso)          echo loso_eval ;;
     in_domain)     echo in_domain_train ;;
+    ablation_positives) echo ablation_positives ;;
     ml_vs_rules)   echo ml_vs_rules_eval ;;
     multidomain)   echo multidomain ;;
     adversarial)   echo adversarial ;;
     weblog_edgar)  echo weblog_edgar_eval ;;
     multisite)     echo multisite_coverage_eval ;;
+    coverage)      echo representation_coverage ;;
     sample)        echo rebuild_family_sample ;;
     family)        echo family_eval ;;
     figure)        echo make_figure ;;

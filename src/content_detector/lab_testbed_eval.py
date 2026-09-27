@@ -184,8 +184,8 @@ def _cross_tool(df):
 
 
 def _family_head(tr, te):
-    # Family identification is a lexical task, sqli vs xss vs cmd tokens, so the
-    # head uses char-TFIDF text, not shape features — shape cannot separate injection families.
+    # Families differ in their tokens, sqli vs xss vs cmd, so the head uses char-TFIDF text
+    # rather than shape features, which cannot separate injection families.
     from sklearn.feature_extraction.text import TfidfVectorizer
     from sklearn.linear_model import LogisticRegression
     from .model import ContentDetector
