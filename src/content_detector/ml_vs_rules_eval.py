@@ -25,7 +25,7 @@ DROP_SHARED = ["path_traversal", "scan"]
 
 
 def regex_flags(df):
-    """ModSecurity-style baseline: flag if ANY detection rule matches the decoded request."""
+    """Declared rule baseline: flag if ANY pattern group of the dictionary matches the decoded request."""
     out = []
     for r in df[["url_path_raw", "url_query", "request_body"]].to_dict("records"):
         dec, _ = decode_fixed_point(f"{r.get('url_path_raw','')} {r.get('url_query','')} {r.get('request_body','')}")

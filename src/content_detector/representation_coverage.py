@@ -100,7 +100,8 @@ def main():
     out["zanbil_in_domain"] = measure("zanbil_in_domain", ztr, zca, zte, atk["train"], 0.00446, t0)
     # cross-domain: the same zanbil training set, scored on EDGAR and WebLog benign
     out["zanbil_to_edgar"] = measure("zanbil_to_edgar", ztr, zca, edg, atk["train"], 1.0, t0)
-    out["zanbil_to_weblog"] = measure("zanbil_to_weblog", ztr, zca, wlb, atk["train"], 0.974, t0)
+    # reference: the Zanbil model at its own 1% threshold on all WebLog benign (weblog_edgar.json weblog_alert_rate@own_1pct)
+    out["zanbil_to_weblog"] = measure("zanbil_to_weblog", ztr, zca, wlb, atk["train"], 0.96986, t0)
     etr, eca, ete, _ = MD.split_benign(edg, "temporal")
     out["edgar_in_domain"] = measure("edgar_in_domain", etr, eca, ete, atk["train"], 0.00608, t0)
     wtr, wca, wte, _ = MD.split_benign(wlb, "temporal")

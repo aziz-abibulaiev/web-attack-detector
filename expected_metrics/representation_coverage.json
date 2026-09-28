@@ -66,7 +66,7 @@
     "nn_distance_target_mean": 0.8118856248504899,
     "nn_distance_target_median": 0.8342179042291246,
     "nn_distance_calib_median": 0.10648003734414768,
-    "reference_alert_rate": 0.974,
+    "reference_alert_rate": 0.96986,
     "alpha_0.01": {
       "radius": 0.502569111976241,
       "threshold": 0.012871410532405357,
